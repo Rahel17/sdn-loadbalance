@@ -1,66 +1,66 @@
 from mininet.topo import Topo
 
-class FatTreeTopo(Topo):
-    def build(self, k=4):
-        # Hitung jumlah perangkat
-        core_switches = (k // 2) ** 2
-        agg_switches = k * (k // 2)
-        edge_switches = k * (k // 2)
-        hosts = (k ** 3) // 4
+class FatTree(Topo):
+    """
+    Fat-tree topology for k=4 (supports 16 hosts, 20 switches)
+    4 pods, each pod has 2 aggregation + 2 edge switches
+    4 core switches connect all pods
+    """
 
-        core, aggr, edge, host = [], [], [], []
+    def __init__(self, k=4):
+        super(FatTree, self).__init__()
 
-        # Core layer
-        for i in range(core_switches):
-            sw = self.addSwitch(f'c{i+1}')
-            core.append(sw)
+        core_switches = []
+        agg_switches = []
+        edge_switches = []
+        hosts = []
 
-        # Aggregation layer
-        for i in range(agg_switches):
-            sw = self.addSwitch(f'a{i+1}')
-            aggr.append(sw)
+        # Create core switches
+        for i in range(int((k / 2) ** 2)):
+            core = self.addSwitch('s{}'.format(i + 1))
+            core_switches.append(core)
 
-        # Edge layer
-        for i in range(edge_switches):
-            sw = self.addSwitch(f'e{i+1}')
-            edge.append(sw)
+        # Create aggregation and edge switches + hosts
+        sw_id = len(core_switches)
+        for pod in range(k):
+            agg_per_pod = []
+            edge_per_pod = []
 
-        # Host layer (dengan label server/client)
-        for i in range(hosts):
-            if i < 6:
-                h = self.addHost(f'h{i+1}', ip=f'10.0.0.{i+1}', role='server')
-            else:
-                h = self.addHost(f'h{i+1}', ip=f'10.0.0.{i+1}', role='client')
-            host.append(h)
+            # aggregation switches
+            for a in range(int(k / 2)):
+                sw_id += 1
+                agg = self.addSwitch('s{}'.format(sw_id))
+                agg_per_pod.append(agg)
+                agg_switches.append(agg)
 
-        # Bangun koneksi antar layer
-        pods = k
-        half = k // 2
+            # edge switches
+            for e in range(int(k / 2)):
+                sw_id += 1
+                edge = self.addSwitch('s{}'.format(sw_id))
+                edge_per_pod.append(edge)
+                edge_switches.append(edge)
 
-        # Edge ↔ Host
-        for p in range(pods):
-            for e in range(half):
-                edge_index = p * half + e
-                for h in range(half):
-                    host_index = edge_index * half + h
-                    self.addLink(edge[edge_index], host[host_index])
+            # connect edge to aggregation
+            for edge in edge_per_pod:
+                for agg in agg_per_pod:
+                    self.addLink(edge, agg)
 
-        # Aggregation ↔ Edge
-        for p in range(pods):
-            for a in range(half):
-                agg_index = p * half + a
-                for e in range(half):
-                    edge_index = p * half + e
-                    self.addLink(aggr[agg_index], edge[edge_index])
+            # connect hosts to edge
+            for e, edge in enumerate(edge_per_pod):
+                for h in range(int(k / 2)):
+                    host_id = len(hosts) + 1
+                    host = self.addHost('h{}'.format(host_id), ip='10.0.0.{}'.format(host_id))
+                    hosts.append(host)
+                    self.addLink(edge, host)
 
-        # Core ↔ Aggregation
-        for a in range(agg_switches):
-            group = a // half
-            for c in range(half):
-                core_index = c * half + (a % half)
-                self.addLink(core[core_index], aggr[a])
+        # connect aggregation to core
+        core_per_pod = int(k / 2)
+        for pod in range(k):
+            for a in range(int(k / 2)):
+                agg = agg_switches[pod * int(k / 2) + a]
+                for c in range(core_per_pod):
+                    core = core_switches[a * core_per_pod + c]
+                    self.addLink(agg, core)
 
-# Agar bisa dipanggil lewat Mininet
-topos = {
-    'fattree': (lambda: FatTreeTopo(k=4))
-}
+
+topos = {'fattree': (lambda: FatTree())}
