@@ -137,7 +137,7 @@ class FatTreeNoLoop(app_manager.RyuApp):
         
         if out_port != ofproto.OFPP_CONTROLLER:
             match = parser.OFPMatch(in_port=in_port, eth_dst=dst, eth_src=src)
-            self.add_flow(datapath, 10, match, actions, idle_timeout=300)  # 5 minutes
+            self.add_flow(datapath, 10, match, actions, idle_timeout=0)  # permanent flow
 
         data = msg.data if msg.buffer_id == ofproto.OFP_NO_BUFFER else None
         out = parser.OFPPacketOut(datapath=datapath, buffer_id=msg.buffer_id,
