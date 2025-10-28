@@ -1,13 +1,3 @@
-"""
-Fat-Tree Load Balancing Controller
-Algorithm: Weighted Round Robin (WRR)
-
-How it works:
-1. Each uplink port has a weight (capacity)
-2. Flows are distributed round-robin based on weights
-3. Port with higher weight gets more flows
-"""
-
 from ryu.base import app_manager
 from ryu.controller import ofp_event
 from ryu.controller.handler import CONFIG_DISPATCHER, MAIN_DISPATCHER

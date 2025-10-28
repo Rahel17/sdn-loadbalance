@@ -1,13 +1,3 @@
-"""
-Fat-Tree Load Balancing Controller
-Algorithm: Weighted Least Connection (WLC)
-
-How it works:
-1. Each uplink port has weight and tracks active connections
-2. New flow goes to port with lowest (connections/weight) ratio
-3. More adaptive than WRR - considers actual load
-"""
-
 from ryu.base import app_manager
 from ryu.controller import ofp_event
 from ryu.controller.handler import CONFIG_DISPATCHER, MAIN_DISPATCHER, DEAD_DISPATCHER
