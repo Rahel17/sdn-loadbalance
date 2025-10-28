@@ -2,13 +2,6 @@ from mininet.topo import Topo
 
 class FatTreeFixed(Topo):
     def build(self, k=4):
-        """
-        Build Fat-Tree topology with k pods.
-        Switch DPID mapping:
-        - Core: 1-4
-        - Aggregation: 5-12
-        - Edge: 13-20
-        """
         pods = k
         half = k // 2
         core_switches = (half) ** 2
