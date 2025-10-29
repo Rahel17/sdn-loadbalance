@@ -1,0 +1,96 @@
+{
+  "scenario": "elephant_mice",
+  "algorithm": "wrr",
+  "flows": [
+    {
+      "src": "h4",
+      "dst": "h12",
+      "bandwidth_requested": "5M",
+      "throughput_achieved": 5.0005661095319605,
+      "duration": 5,
+      "protocol": "tcp"
+    },
+    {
+      "src": "h3",
+      "dst": "h11",
+      "bandwidth_requested": "5M",
+      "throughput_achieved": 4.994731341275156,
+      "duration": 5,
+      "protocol": "tcp"
+    },
+    {
+      "src": "h3",
+      "dst": "h11",
+      "bandwidth_requested": "5M",
+      "throughput_achieved": 4.991737373192402,
+      "duration": 5,
+      "protocol": "tcp"
+    },
+    {
+      "src": "h4",
+      "dst": "h12",
+      "bandwidth_requested": "5M",
+      "throughput_achieved": 4.992974352249007,
+      "duration": 5,
+      "protocol": "tcp"
+    },
+    {
+      "src": "h4",
+      "dst": "h12",
+      "bandwidth_requested": "5M",
+      "throughput_achieved": 4.992016605523987,
+      "duration": 5,
+      "protocol": "tcp"
+    },
+    {
+      "src": "h3",
+      "dst": "h11",
+      "bandwidth_requested": "5M",
+      "throughput_achieved": 4.992624687537198,
+      "duration": 5,
+      "protocol": "tcp"
+    },
+    {
+      "src": "h3",
+      "dst": "h11",
+      "bandwidth_requested": "5M",
+      "throughput_achieved": 4.98334628716719,
+      "duration": 5,
+      "protocol": "tcp"
+    },
+    {
+      "src": "h4",
+      "dst": "h12",
+      "bandwidth_requested": "5M",
+      "throughput_achieved": 4.987074259691926,
+      "duration": 5,
+      "protocol": "tcp"
+    },
+    {
+      "src": "h3",
+      "dst": "h11",
+      "bandwidth_requested": "5M",
+      "throughput_achieved": 4.995851782209037,
+      "duration": 5,
+      "protocol": "tcp"
+    },
+    {
+      "src": "h1",
+      "dst": "h5",
+      "bandwidth_requested": "80M",
+      "throughput_achieved": 79.9834494816435,
+      "duration": 180,
+      "protocol": "tcp"
+    },
+    {
+      "src": "h2",
+      "dst": "h6",
+      "bandwidth_requested": "80M",
+      "throughput_achieved": 79.9861768735717,
+      "duration": 180,
+      "protocol": "tcp"
+    }
+  ],
+  "start_time": "2025-10-26T00:51:28.032651",
+  "end_time": "2025-10-26T00:54:28.969101"
+}

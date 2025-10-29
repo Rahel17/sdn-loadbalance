@@ -1,0 +1,13 @@
+label,src,dst,protocol,throughput,jitter,packet_loss
+4K-Stream-1,h1,h9,tcp,24.72,0.0000,0.0000
+4K-Stream-2,h2,h10,tcp,24.99,0.0000,0.0000
+1080p-Stream-1,h3,h11,tcp,8.00,0.0000,0.0000
+1080p-Stream-2,h4,h12,tcp,8.00,0.0000,0.0000
+1080p-Stream-3,h5,h13,tcp,8.00,0.0000,0.0000
+720p-Stream-1,h6,h14,tcp,5.01,0.0000,0.0000
+720p-Stream-2,h7,h15,tcp,5.01,0.0000,0.0000
+720p-Stream-3,h8,h16,tcp,5.01,0.0000,0.0000
+480p-Stream-1,h1,h13,tcp,2.51,0.0000,0.0000
+480p-Stream-2,h2,h14,tcp,2.51,0.0000,0.0000
+LiveSports-UDP-1,h3,h15,udp,10.00,0.1179,0.0000
+LiveSports-UDP-2,h4,h16,udp,10.00,0.0713,0.0000

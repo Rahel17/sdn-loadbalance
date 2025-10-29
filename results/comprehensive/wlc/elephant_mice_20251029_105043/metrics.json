@@ -1,0 +1,249 @@
+{
+  "scenario": "elephant_mice",
+  "algorithm": "wlc",
+  "start_time": "2025-10-29T10:50:43.939457",
+  "end_time": "2025-10-29T10:52:46.832822",
+  "flows": [
+    {
+      "src": "h4",
+      "dst": "h12",
+      "protocol": "tcp",
+      "throughput": 4.992840622000475,
+      "jitter": 0,
+      "packet_loss": 0,
+      "label": "Mouse-TCP-R1"
+    },
+    {
+      "src": "h5",
+      "dst": "h13",
+      "protocol": "udp",
+      "throughput": 3.00009939481159,
+      "jitter": 0.22157244849624955,
+      "packet_loss": 0,
+      "label": "Mouse-UDP-R1"
+    },
+    {
+      "src": "h6",
+      "dst": "h14",
+      "protocol": "udp",
+      "throughput": 2.999611683410403,
+      "jitter": 0.18547629678936006,
+      "packet_loss": 0,
+      "label": "Mouse-UDP-R2"
+    },
+    {
+      "src": "h5",
+      "dst": "h13",
+      "protocol": "tcp",
+      "throughput": 4.994163380496352,
+      "jitter": 0,
+      "packet_loss": 0,
+      "label": "Mouse-TCP-R2"
+    },
+    {
+      "src": "h6",
+      "dst": "h14",
+      "protocol": "tcp",
+      "throughput": 4.993141772805896,
+      "jitter": 0,
+      "packet_loss": 0,
+      "label": "Mouse-TCP-R3"
+    },
+    {
+      "src": "h7",
+      "dst": "h15",
+      "protocol": "udp",
+      "throughput": 2.9998960124785023,
+      "jitter": 0.10169986256098555,
+      "packet_loss": 0,
+      "label": "Mouse-UDP-R3"
+    },
+    {
+      "src": "h7",
+      "dst": "h15",
+      "protocol": "tcp",
+      "throughput": 4.993684728536193,
+      "jitter": 0,
+      "packet_loss": 0,
+      "label": "Mouse-TCP-R4"
+    },
+    {
+      "src": "h8",
+      "dst": "h16",
+      "protocol": "udp",
+      "throughput": 3.000103594737387,
+      "jitter": 0.1502922897173889,
+      "packet_loss": 0,
+      "label": "Mouse-UDP-R4"
+    },
+    {
+      "src": "h5",
+      "dst": "h13",
+      "protocol": "udp",
+      "throughput": 3.0001149945952537,
+      "jitter": 0.23506605393197144,
+      "packet_loss": 0,
+      "label": "Mouse-UDP-R5"
+    },
+    {
+      "src": "h4",
+      "dst": "h12",
+      "protocol": "tcp",
+      "throughput": 4.992313695492523,
+      "jitter": 0,
+      "packet_loss": 0,
+      "label": "Mouse-TCP-R5"
+    },
+    {
+      "src": "h5",
+      "dst": "h13",
+      "protocol": "tcp",
+      "throughput": 4.80860946981299,
+      "jitter": 0,
+      "packet_loss": 0,
+      "label": "Mouse-TCP-R6"
+    },
+    {
+      "src": "h6",
+      "dst": "h14",
+      "protocol": "udp",
+      "throughput": 2.9986487242837843,
+      "jitter": 0.6127629958288933,
+      "packet_loss": 0,
+      "label": "Mouse-UDP-R6"
+    },
+    {
+      "src": "h1",
+      "dst": "h9",
+      "protocol": "tcp",
+      "throughput": 79.39700983162966,
+      "jitter": 0,
+      "packet_loss": 0,
+      "label": "Elephant-TCP-1"
+    },
+    {
+      "src": "h3",
+      "dst": "h11",
+      "protocol": "udp",
+      "throughput": 49.99965975178914,
+      "jitter": 0.02617129635972408,
+      "packet_loss": 0.028380843895705225,
+      "label": "Elephant-UDP-1"
+    },
+    {
+      "src": "h2",
+      "dst": "h10",
+      "protocol": "tcp",
+      "throughput": 79.3836160852576,
+      "jitter": 0,
+      "packet_loss": 0,
+      "label": "Elephant-TCP-2"
+    }
+  ],
+  "throughput": {
+    "tcp": [
+      4.992840622000475,
+      4.994163380496352,
+      4.993141772805896,
+      4.993684728536193,
+      4.992313695492523,
+      4.80860946981299,
+      79.39700983162966,
+      79.3836160852576
+    ],
+    "udp": [
+      3.00009939481159,
+      2.999611683410403,
+      2.9998960124785023,
+      3.000103594737387,
+      3.0001149945952537,
+      2.9986487242837843,
+      49.99965975178914
+    ]
+  },
+  "delay": [
+    {
+      "min": 0.024,
+      "avg": 0.07393333333333332,
+      "max": 0.378,
+      "count": 30
+    },
+    {
+      "min": 0.039,
+      "avg": 0.060366666666666666,
+      "max": 0.078,
+      "count": 30
+    },
+    {
+      "min": 0.021,
+      "avg": 0.2454,
+      "max": 5.83,
+      "count": 30
+    }
+  ],
+  "jitter": [
+    0.22157244849624955,
+    0.18547629678936006,
+    0.10169986256098555,
+    0.1502922897173889,
+    0.23506605393197144,
+    0.6127629958288933,
+    0.02617129635972408
+  ],
+  "packet_loss": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0.028380843895705225
+  ],
+  "cpu_utilization": {
+    "samples": [
+      0.7,
+      1.0,
+      1.0,
+      2.9,
+      2.0,
+      3.8,
+      2.0,
+      3.0,
+      1.0,
+      2.9,
+      1.0,
+      1.0,
+      2.0,
+      1.0,
+      1.0,
+      2.0,
+      1.0,
+      1.0,
+      2.9,
+      1.0,
+      1.0,
+      3.0,
+      1.0,
+      1.0,
+      5.9,
+      1.0,
+      2.0,
+      1.0,
+      4.9,
+      3.9,
+      2.0,
+      1.0,
+      1.0,
+      2.0,
+      1.9,
+      1.0,
+      1.0,
+      1.0
+    ],
+    "avg": 1.8368421052631578,
+    "max": 5.9,
+    "min": 0.7
+  },
+  "fairness_index": 0.12700408087494663,
+  "response_time": []
+}

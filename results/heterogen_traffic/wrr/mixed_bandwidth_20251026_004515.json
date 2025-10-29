@@ -1,0 +1,40 @@
+{
+  "scenario": "mixed_bandwidth",
+  "algorithm": "wrr",
+  "flows": [
+    {
+      "src": "h1",
+      "dst": "h5",
+      "bandwidth_requested": "100M",
+      "throughput_achieved": 99.9346064672931,
+      "duration": 60,
+      "protocol": "tcp"
+    },
+    {
+      "src": "h2",
+      "dst": "h6",
+      "bandwidth_requested": "100M",
+      "throughput_achieved": 99.93495801007515,
+      "duration": 60,
+      "protocol": "tcp"
+    },
+    {
+      "src": "h3",
+      "dst": "h7",
+      "bandwidth_requested": "10M",
+      "throughput_achieved": 9.89878926446196,
+      "duration": 60,
+      "protocol": "tcp"
+    },
+    {
+      "src": "h4",
+      "dst": "h8",
+      "bandwidth_requested": "10M",
+      "throughput_achieved": 10.009505125823994,
+      "duration": 60,
+      "protocol": "tcp"
+    }
+  ],
+  "start_time": "2025-10-26T00:44:13.025976",
+  "end_time": "2025-10-26T00:45:15.756767"
+}

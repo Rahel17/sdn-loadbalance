@@ -1,0 +1,265 @@
+{
+  "scenario": "voip_video_data_mix",
+  "algorithm": "wlc",
+  "start_time": "2025-10-29T11:12:43.578896",
+  "end_time": "2025-10-29T11:14:21.526864",
+  "flows": [
+    {
+      "src": "h1",
+      "dst": "h9",
+      "protocol": "tcp",
+      "throughput": 4.0060322240745485,
+      "jitter": 0,
+      "packet_loss": 0,
+      "label": "VideoConf-1-Out",
+      "bandwidth_requested": "4M"
+    },
+    {
+      "src": "h9",
+      "dst": "h1",
+      "protocol": "tcp",
+      "throughput": 4.0060263068027195,
+      "jitter": 0,
+      "packet_loss": 0,
+      "label": "VideoConf-1-Return",
+      "bandwidth_requested": "4M"
+    },
+    {
+      "src": "h2",
+      "dst": "h10",
+      "protocol": "tcp",
+      "throughput": 5.007698561228568,
+      "jitter": 0,
+      "packet_loss": 0,
+      "label": "VideoConf-2-Out",
+      "bandwidth_requested": "5M"
+    },
+    {
+      "src": "h10",
+      "dst": "h2",
+      "protocol": "tcp",
+      "throughput": 5.007614803344739,
+      "jitter": 0,
+      "packet_loss": 0,
+      "label": "VideoConf-2-Return",
+      "bandwidth_requested": "5M"
+    },
+    {
+      "src": "h5",
+      "dst": "h13",
+      "protocol": "udp",
+      "throughput": 0.080055059986175,
+      "jitter": 1.2352985909283993,
+      "packet_loss": 0,
+      "label": "VoIP-1-Out",
+      "bandwidth_requested": "80K"
+    },
+    {
+      "src": "h13",
+      "dst": "h5",
+      "protocol": "udp",
+      "throughput": 0.08005704354125505,
+      "jitter": 1.269114978537618,
+      "packet_loss": 0,
+      "label": "VoIP-1-Return",
+      "bandwidth_requested": "80K"
+    },
+    {
+      "src": "h6",
+      "dst": "h14",
+      "protocol": "udp",
+      "throughput": 0.10000732213354305,
+      "jitter": 1.3522823213185964,
+      "packet_loss": 0,
+      "label": "VoIP-2-Out",
+      "bandwidth_requested": "100K"
+    },
+    {
+      "src": "h14",
+      "dst": "h6",
+      "protocol": "udp",
+      "throughput": 0.10000825331022406,
+      "jitter": 1.191406584131765,
+      "packet_loss": 0,
+      "label": "VoIP-2-Return",
+      "bandwidth_requested": "100K"
+    },
+    {
+      "src": "h3",
+      "dst": "h11",
+      "protocol": "tcp",
+      "throughput": 79.9751716137978,
+      "jitter": 0,
+      "packet_loss": 0,
+      "label": "FileTransfer-1",
+      "bandwidth_requested": "80M"
+    },
+    {
+      "src": "h4",
+      "dst": "h12",
+      "protocol": "tcp",
+      "throughput": 99.9542662028026,
+      "jitter": 0,
+      "packet_loss": 0,
+      "label": "FileTransfer-2",
+      "bandwidth_requested": "100M"
+    },
+    {
+      "src": "h7",
+      "dst": "h15",
+      "protocol": "tcp",
+      "throughput": 10.003436450847639,
+      "jitter": 0,
+      "packet_loss": 0,
+      "label": "Web-1",
+      "bandwidth_requested": "10M"
+    },
+    {
+      "src": "h8",
+      "dst": "h16",
+      "protocol": "tcp",
+      "throughput": 8.000553352614492,
+      "jitter": 0,
+      "packet_loss": 0,
+      "label": "Web-2",
+      "bandwidth_requested": "8M"
+    }
+  ],
+  "throughput": {
+    "tcp": [
+      4.0060322240745485,
+      4.0060263068027195,
+      5.007698561228568,
+      5.007614803344739,
+      79.9751716137978,
+      99.9542662028026,
+      10.003436450847639,
+      8.000553352614492
+    ],
+    "udp": [
+      0.080055059986175,
+      0.08005704354125505,
+      0.10000732213354305,
+      0.10000825331022406
+    ]
+  },
+  "delay": [
+    {
+      "min": 0.055,
+      "avg": 0.07686666666666667,
+      "max": 0.11,
+      "count": 30
+    },
+    {
+      "min": 0.041,
+      "avg": 0.15119999999999997,
+      "max": 2.27,
+      "count": 30
+    },
+    {
+      "min": 0.038,
+      "avg": 0.07156666666666665,
+      "max": 0.276,
+      "count": 30
+    },
+    {
+      "min": 0.038,
+      "avg": 0.07363333333333336,
+      "max": 0.102,
+      "count": 30
+    },
+    {
+      "min": 0.032,
+      "avg": 0.0683,
+      "max": 0.223,
+      "count": 30
+    },
+    {
+      "min": 0.052,
+      "avg": 0.106,
+      "max": 0.44,
+      "count": 30
+    },
+    {
+      "min": 0.024,
+      "avg": 0.07166666666666667,
+      "max": 0.308,
+      "count": 30
+    },
+    {
+      "min": 0.024,
+      "avg": 0.09919999999999998,
+      "max": 1.33,
+      "count": 30
+    }
+  ],
+  "jitter": [
+    1.2352985909283993,
+    1.269114978537618,
+    1.3522823213185964,
+    1.191406584131765
+  ],
+  "packet_loss": [
+    0,
+    0,
+    0,
+    0
+  ],
+  "cpu_utilization": {
+    "samples": [
+      22.5,
+      27.4,
+      9.2,
+      13.7,
+      7.5,
+      1.0,
+      1.0,
+      2.8,
+      1.9,
+      4.8,
+      7.6,
+      3.9,
+      3.9,
+      2.0,
+      2.9,
+      1.0,
+      3.9,
+      16.6,
+      3.0,
+      7.9,
+      1.0,
+      3.0,
+      9.5,
+      9.6,
+      2.9,
+      2.0,
+      2.9,
+      3.8,
+      3.9,
+      9.7,
+      1.0,
+      1.0,
+      1.0,
+      1.9,
+      1.9,
+      2.9,
+      3.9,
+      3.9,
+      2.0,
+      10.7,
+      3.9,
+      3.9
+    ],
+    "avg": 5.495238095238097,
+    "max": 27.4,
+    "min": 1.0
+  },
+  "fairness_index": 0.9999999786334788,
+  "response_time": [
+    5.319833755493164,
+    8.732318878173828,
+    4.342317581176758,
+    10.972023010253906,
+    8.123397827148438
+  ]
+}

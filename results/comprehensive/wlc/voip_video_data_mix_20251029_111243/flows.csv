@@ -1,0 +1,13 @@
+label,src,dst,protocol,throughput,jitter,packet_loss
+VideoConf-1-Out,h1,h9,tcp,4.01,0.0000,0.0000
+VideoConf-1-Return,h9,h1,tcp,4.01,0.0000,0.0000
+VideoConf-2-Out,h2,h10,tcp,5.01,0.0000,0.0000
+VideoConf-2-Return,h10,h2,tcp,5.01,0.0000,0.0000
+VoIP-1-Out,h5,h13,udp,0.08,1.2353,0.0000
+VoIP-1-Return,h13,h5,udp,0.08,1.2691,0.0000
+VoIP-2-Out,h6,h14,udp,0.10,1.3523,0.0000
+VoIP-2-Return,h14,h6,udp,0.10,1.1914,0.0000
+FileTransfer-1,h3,h11,tcp,79.98,0.0000,0.0000
+FileTransfer-2,h4,h12,tcp,99.95,0.0000,0.0000
+Web-1,h7,h15,tcp,10.00,0.0000,0.0000
+Web-2,h8,h16,tcp,8.00,0.0000,0.0000

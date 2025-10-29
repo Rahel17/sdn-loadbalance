@@ -1,0 +1,197 @@
+{
+  "scenario": "voip_video_data_mix",
+  "algorithm": "wrr",
+  "flows": [
+    {
+      "src": "h1",
+      "dst": "h9",
+      "bandwidth_requested": "4M",
+      "throughput_achieved": 4.0057511507243255,
+      "duration": 90,
+      "protocol": "tcp",
+      "port": 5001
+    },
+    {
+      "src": "h9",
+      "dst": "h1",
+      "bandwidth_requested": "4M",
+      "throughput_achieved": 4.005817478343846,
+      "duration": 90,
+      "protocol": "tcp",
+      "port": 5002
+    },
+    {
+      "src": "h2",
+      "dst": "h10",
+      "bandwidth_requested": "4M",
+      "throughput_achieved": 4.0060482408378695,
+      "duration": 90,
+      "protocol": "tcp",
+      "port": 5003
+    },
+    {
+      "src": "h10",
+      "dst": "h2",
+      "bandwidth_requested": "4M",
+      "throughput_achieved": 4.005979102726342,
+      "duration": 90,
+      "protocol": "tcp",
+      "port": 5004
+    },
+    {
+      "src": "h3",
+      "dst": "h11",
+      "bandwidth_requested": "3M",
+      "throughput_achieved": 3.0047951750294364,
+      "duration": 90,
+      "protocol": "tcp",
+      "port": 5005
+    },
+    {
+      "src": "h11",
+      "dst": "h3",
+      "bandwidth_requested": "3M",
+      "throughput_achieved": 3.0045849993766653,
+      "duration": 90,
+      "protocol": "tcp",
+      "port": 5006
+    },
+    {
+      "src": "h4",
+      "dst": "h12",
+      "bandwidth_requested": "5M",
+      "throughput_achieved": 4.986286122021283,
+      "duration": 90,
+      "protocol": "tcp",
+      "port": 5007
+    },
+    {
+      "src": "h12",
+      "dst": "h4",
+      "bandwidth_requested": "5M",
+      "throughput_achieved": 5.0073441944326795,
+      "duration": 90,
+      "protocol": "tcp",
+      "port": 5008
+    },
+    {
+      "src": "h5",
+      "dst": "h13",
+      "bandwidth_requested": "80K",
+      "throughput_achieved": 0.08005821504125306,
+      "duration": 90,
+      "protocol": "udp",
+      "port": 5009
+    },
+    {
+      "src": "h13",
+      "dst": "h5",
+      "bandwidth_requested": "80K",
+      "throughput_achieved": 0.08005808605893584,
+      "duration": 90,
+      "protocol": "udp",
+      "port": 5010
+    },
+    {
+      "src": "h6",
+      "dst": "h14",
+      "bandwidth_requested": "64K",
+      "throughput_achieved": 0.06409711917446996,
+      "duration": 90,
+      "protocol": "udp",
+      "port": 5011
+    },
+    {
+      "src": "h14",
+      "dst": "h6",
+      "bandwidth_requested": "64K",
+      "throughput_achieved": 0.06409728511259367,
+      "duration": 90,
+      "protocol": "udp",
+      "port": 5012
+    },
+    {
+      "src": "h7",
+      "dst": "h15",
+      "bandwidth_requested": "100K",
+      "throughput_achieved": 0.10000836109671143,
+      "duration": 90,
+      "protocol": "udp",
+      "port": 5013
+    },
+    {
+      "src": "h15",
+      "dst": "h7",
+      "bandwidth_requested": "100K",
+      "throughput_achieved": 0.10000830998144104,
+      "duration": 90,
+      "protocol": "udp",
+      "port": 5014
+    },
+    {
+      "src": "h8",
+      "dst": "h10",
+      "bandwidth_requested": "60M",
+      "throughput_achieved": 59.977813113493724,
+      "duration": 90,
+      "protocol": "tcp",
+      "port": 5017
+    },
+    {
+      "src": "h1",
+      "dst": "h16",
+      "bandwidth_requested": "80M",
+      "throughput_achieved": 79.96618622722396,
+      "duration": 90,
+      "protocol": "tcp",
+      "port": 5015
+    },
+    {
+      "src": "h2",
+      "dst": "h13",
+      "bandwidth_requested": "100M",
+      "throughput_achieved": 99.96525011763245,
+      "duration": 90,
+      "protocol": "tcp",
+      "port": 5016
+    },
+    {
+      "src": "h3",
+      "dst": "h14",
+      "bandwidth_requested": "10M",
+      "throughput_achieved": 9.91454181065917,
+      "duration": 90,
+      "protocol": "tcp",
+      "port": 5018
+    },
+    {
+      "src": "h4",
+      "dst": "h15",
+      "bandwidth_requested": "8M",
+      "throughput_achieved": 7.99985323401991,
+      "duration": 90,
+      "protocol": "tcp",
+      "port": 5019
+    },
+    {
+      "src": "h6",
+      "dst": "h11",
+      "bandwidth_requested": "6M",
+      "throughput_achieved": 5.999252671682072,
+      "duration": 90,
+      "protocol": "tcp",
+      "port": 5021
+    },
+    {
+      "src": "h5",
+      "dst": "h9",
+      "bandwidth_requested": "12M",
+      "throughput_achieved": 11.999682195987948,
+      "duration": 90,
+      "protocol": "tcp",
+      "port": 5020
+    }
+  ],
+  "start_time": "2025-10-26T10:43:07.627199",
+  "end_time": "2025-10-26T10:44:46.432389"
+}

@@ -1,0 +1,16 @@
+label,src,dst,protocol,throughput,jitter,packet_loss
+Mouse-TCP-R1,h4,h12,tcp,4.96,0.0000,0.0000
+Mouse-UDP-R1,h5,h13,udp,3.00,0.1377,0.0000
+Mouse-TCP-R2,h5,h13,tcp,4.99,0.0000,0.0000
+Mouse-UDP-R2,h6,h14,udp,3.00,0.2036,0.0000
+Mouse-UDP-R3,h7,h15,udp,3.00,0.2625,0.0000
+Mouse-TCP-R3,h6,h14,tcp,4.99,0.0000,0.0000
+Mouse-TCP-R4,h7,h15,tcp,4.99,0.0000,0.0000
+Mouse-UDP-R4,h8,h16,udp,3.00,0.1423,0.0000
+Mouse-TCP-R5,h4,h12,tcp,4.99,0.0000,0.0000
+Mouse-UDP-R5,h5,h13,udp,3.00,0.1945,0.0000
+Mouse-TCP-R6,h5,h13,tcp,4.99,0.0000,0.0000
+Mouse-UDP-R6,h6,h14,udp,3.00,0.2455,0.0000
+Elephant-TCP-2,h2,h10,tcp,79.98,0.0000,0.0000
+Elephant-TCP-1,h1,h9,tcp,79.98,0.0000,0.0000
+Elephant-UDP-1,h3,h11,udp,50.00,0.0291,0.0135

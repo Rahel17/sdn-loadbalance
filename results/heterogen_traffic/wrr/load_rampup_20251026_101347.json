@@ -1,0 +1,251 @@
+{
+  "scenario": "load_rampup",
+  "algorithm": "wrr",
+  "flows": [
+    {
+      "src": "h1",
+      "dst": "h9",
+      "bandwidth_requested": "10M",
+      "throughput_achieved": 10.017868638665336,
+      "duration": 30,
+      "protocol": "tcp",
+      "port": 5000
+    },
+    {
+      "src": "h2",
+      "dst": "h10",
+      "bandwidth_requested": "10M",
+      "throughput_achieved": 10.017698900587805,
+      "duration": 30,
+      "protocol": "tcp",
+      "port": 5001
+    },
+    {
+      "src": "h1",
+      "dst": "h9",
+      "bandwidth_requested": "20M",
+      "throughput_achieved": 19.9995282668891,
+      "duration": 30,
+      "protocol": "tcp",
+      "port": 5000
+    },
+    {
+      "src": "h2",
+      "dst": "h10",
+      "bandwidth_requested": "20M",
+      "throughput_achieved": 19.998012560489894,
+      "duration": 30,
+      "protocol": "tcp",
+      "port": 5001
+    },
+    {
+      "src": "h3",
+      "dst": "h11",
+      "bandwidth_requested": "20M",
+      "throughput_achieved": 20.000538199695384,
+      "duration": 30,
+      "protocol": "tcp",
+      "port": 5002
+    },
+    {
+      "src": "h4",
+      "dst": "h12",
+      "bandwidth_requested": "20M",
+      "throughput_achieved": 20.017752021226944,
+      "duration": 30,
+      "protocol": "tcp",
+      "port": 5003
+    },
+    {
+      "src": "h5",
+      "dst": "h13",
+      "bandwidth_requested": "20M",
+      "throughput_achieved": 19.99904097916786,
+      "duration": 30,
+      "protocol": "tcp",
+      "port": 5004
+    },
+    {
+      "src": "h1",
+      "dst": "h9",
+      "bandwidth_requested": "30M",
+      "throughput_achieved": 29.983644270268336,
+      "duration": 30,
+      "protocol": "tcp",
+      "port": 5000
+    },
+    {
+      "src": "h2",
+      "dst": "h10",
+      "bandwidth_requested": "30M",
+      "throughput_achieved": 29.984396859504958,
+      "duration": 30,
+      "protocol": "tcp",
+      "port": 5001
+    },
+    {
+      "src": "h3",
+      "dst": "h11",
+      "bandwidth_requested": "30M",
+      "throughput_achieved": 29.9856635704596,
+      "duration": 30,
+      "protocol": "tcp",
+      "port": 5002
+    },
+    {
+      "src": "h4",
+      "dst": "h12",
+      "bandwidth_requested": "30M",
+      "throughput_achieved": 29.98041076235118,
+      "duration": 30,
+      "protocol": "tcp",
+      "port": 5003
+    },
+    {
+      "src": "h5",
+      "dst": "h13",
+      "bandwidth_requested": "30M",
+      "throughput_achieved": 29.98229589252763,
+      "duration": 30,
+      "protocol": "tcp",
+      "port": 5004
+    },
+    {
+      "src": "h6",
+      "dst": "h14",
+      "bandwidth_requested": "30M",
+      "throughput_achieved": 29.9819246591217,
+      "duration": 30,
+      "protocol": "tcp",
+      "port": 5005
+    },
+    {
+      "src": "h7",
+      "dst": "h15",
+      "bandwidth_requested": "30M",
+      "throughput_achieved": 30.016319834688876,
+      "duration": 30,
+      "protocol": "tcp",
+      "port": 5006
+    },
+    {
+      "src": "h8",
+      "dst": "h16",
+      "bandwidth_requested": "30M",
+      "throughput_achieved": 29.98859586025711,
+      "duration": 30,
+      "protocol": "tcp",
+      "port": 5007
+    },
+    {
+      "src": "h1",
+      "dst": "h9",
+      "bandwidth_requested": "40M",
+      "throughput_achieved": 39.955282492665916,
+      "duration": 30,
+      "protocol": "tcp",
+      "port": 5000
+    },
+    {
+      "src": "h2",
+      "dst": "h10",
+      "bandwidth_requested": "40M",
+      "throughput_achieved": 39.96662840707847,
+      "duration": 30,
+      "protocol": "tcp",
+      "port": 5001
+    },
+    {
+      "src": "h3",
+      "dst": "h11",
+      "bandwidth_requested": "40M",
+      "throughput_achieved": 39.969920160266724,
+      "duration": 30,
+      "protocol": "tcp",
+      "port": 5002
+    },
+    {
+      "src": "h4",
+      "dst": "h12",
+      "bandwidth_requested": "40M",
+      "throughput_achieved": 39.963053863273096,
+      "duration": 30,
+      "protocol": "tcp",
+      "port": 5003
+    },
+    {
+      "src": "h5",
+      "dst": "h13",
+      "bandwidth_requested": "40M",
+      "throughput_achieved": 39.966458812946904,
+      "duration": 30,
+      "protocol": "tcp",
+      "port": 5004
+    },
+    {
+      "src": "h6",
+      "dst": "h14",
+      "bandwidth_requested": "40M",
+      "throughput_achieved": 39.9717890183588,
+      "duration": 30,
+      "protocol": "tcp",
+      "port": 5005
+    },
+    {
+      "src": "h7",
+      "dst": "h15",
+      "bandwidth_requested": "40M",
+      "throughput_achieved": 39.974617670908756,
+      "duration": 30,
+      "protocol": "tcp",
+      "port": 5006
+    },
+    {
+      "src": "h8",
+      "dst": "h16",
+      "bandwidth_requested": "40M",
+      "throughput_achieved": 39.97850724810192,
+      "duration": 30,
+      "protocol": "tcp",
+      "port": 5007
+    },
+    {
+      "src": "h1",
+      "dst": "h9",
+      "bandwidth_requested": "40M",
+      "throughput_achieved": 39.96711668059752,
+      "duration": 30,
+      "protocol": "tcp",
+      "port": 5008
+    },
+    {
+      "src": "h2",
+      "dst": "h10",
+      "bandwidth_requested": "40M",
+      "throughput_achieved": 39.97220169340081,
+      "duration": 30,
+      "protocol": "tcp",
+      "port": 5009
+    },
+    {
+      "src": "h3",
+      "dst": "h11",
+      "bandwidth_requested": "40M",
+      "throughput_achieved": 39.964821765756845,
+      "duration": 30,
+      "protocol": "tcp",
+      "port": 5010
+    },
+    {
+      "src": "h4",
+      "dst": "h12",
+      "bandwidth_requested": "40M",
+      "throughput_achieved": 39.96661979336801,
+      "duration": 30,
+      "protocol": "tcp",
+      "port": 5011
+    }
+  ],
+  "start_time": "2025-10-26T10:11:17.444766",
+  "end_time": "2025-10-26T10:13:47.024775"
+}

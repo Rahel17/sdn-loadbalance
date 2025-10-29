@@ -1,0 +1,80 @@
+{
+  "scenario": "mixed_bandwidth",
+  "algorithm": "wrr",
+  "flows": [
+    {
+      "src": "h1",
+      "dst": "h5",
+      "bandwidth_requested": "100M",
+      "throughput_achieved": 99.9309463600982,
+      "duration": 60,
+      "protocol": "tcp",
+      "port": 5001
+    },
+    {
+      "src": "h2",
+      "dst": "h6",
+      "bandwidth_requested": "100M",
+      "throughput_achieved": 98.42446705027909,
+      "duration": 60,
+      "protocol": "tcp",
+      "port": 5002
+    },
+    {
+      "src": "h3",
+      "dst": "h7",
+      "bandwidth_requested": "10M",
+      "throughput_achieved": 9.87432730585929,
+      "duration": 60,
+      "protocol": "tcp",
+      "port": 5003
+    },
+    {
+      "src": "h4",
+      "dst": "h8",
+      "bandwidth_requested": "10M",
+      "throughput_achieved": 9.87375583634822,
+      "duration": 60,
+      "protocol": "tcp",
+      "port": 5004
+    },
+    {
+      "src": "h1",
+      "dst": "h9",
+      "bandwidth_requested": "1M",
+      "throughput_achieved": 1.0129237052069862,
+      "duration": 60,
+      "protocol": "tcp",
+      "port": 5005
+    },
+    {
+      "src": "h2",
+      "dst": "h10",
+      "bandwidth_requested": "1M",
+      "throughput_achieved": 0.998020120693705,
+      "duration": 60,
+      "protocol": "tcp",
+      "port": 5006
+    },
+    {
+      "src": "h3",
+      "dst": "h11",
+      "bandwidth_requested": "100K",
+      "throughput_achieved": 0.10000749492217774,
+      "duration": 60,
+      "protocol": "udp",
+      "port": 5007
+    },
+    {
+      "src": "h4",
+      "dst": "h12",
+      "bandwidth_requested": "100K",
+      "throughput_achieved": 0.10000704489514849,
+      "duration": 60,
+      "protocol": "udp",
+      "port": 5008
+    }
+  ],
+  "start_time": "2025-10-26T09:45:26.124767",
+  "end_time": "2025-10-26T09:46:32.730908"
+}

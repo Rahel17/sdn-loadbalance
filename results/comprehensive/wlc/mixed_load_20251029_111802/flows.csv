@@ -1,0 +1,11 @@
+label,src,dst,protocol,throughput,jitter,packet_loss
+Heavy-TCP-1,h1,h9,tcp,99.92,0.0000,0.0000
+Heavy-TCP-2,h2,h10,tcp,99.93,0.0000,0.0000
+Medium-TCP-1,h3,h11,tcp,29.74,0.0000,0.0000
+Medium-TCP-2,h4,h12,tcp,29.99,0.0000,0.0000
+Medium-TCP-3,h5,h13,tcp,29.98,0.0000,0.0000
+Light-TCP-1,h6,h14,tcp,5.01,0.0000,0.0000
+Light-TCP-2,h7,h15,tcp,5.02,0.0000,0.0000
+VeryLight-UDP-1,h8,h16,udp,0.50,0.2022,0.0000
+VeryLight-UDP-2,h1,h13,udp,0.50,0.1469,0.0000
+VeryLight-UDP-3,h2,h14,udp,1.00,0.3254,0.0000

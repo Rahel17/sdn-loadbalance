@@ -1,0 +1,2 @@
+Scenario,Algorithm,TCP Throughput Avg (Mbps),TCP Throughput Min (Mbps),TCP Throughput Max (Mbps),UDP Throughput Avg (Mbps),Delay Avg (ms),Delay Min (ms),Delay Max (ms),Jitter Avg (ms),Jitter Min (ms),Jitter Max (ms),Packet Loss Avg (%),Packet Loss Max (%),CPU Avg (%),CPU Max (%),CPU Min (%),Fairness Index,Response Time Avg (ms),Total Flows,TCP Flows,UDP Flows,Test Date
+elephant_mice,wlc,23.7347,4.9582,79.9801,9.7139,0.1680,0.0240,10.3000,0.1736,0.0291,0.2625,0.0019,0.0135,2.0800,5.9000,0.7000,1.0000,0,15,8,7,2025-10-29T11:15:49.916495

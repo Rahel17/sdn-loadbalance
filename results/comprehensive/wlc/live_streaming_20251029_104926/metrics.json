@@ -1,0 +1,234 @@
+{
+  "scenario": "live_streaming",
+  "algorithm": "wlc",
+  "start_time": "2025-10-29T10:49:26.576746",
+  "end_time": "2025-10-29T10:50:33.927117",
+  "flows": [
+    {
+      "src": "h1",
+      "dst": "h9",
+      "protocol": "tcp",
+      "throughput": 24.987747377719284,
+      "jitter": 0,
+      "packet_loss": 0,
+      "label": "4K-Stream-1"
+    },
+    {
+      "src": "h2",
+      "dst": "h10",
+      "protocol": "tcp",
+      "throughput": 24.99176729108877,
+      "jitter": 0,
+      "packet_loss": 0,
+      "label": "4K-Stream-2"
+    },
+    {
+      "src": "h3",
+      "dst": "h11",
+      "protocol": "tcp",
+      "throughput": 7.998366776846164,
+      "jitter": 0,
+      "packet_loss": 0,
+      "label": "1080p-Stream-1"
+    },
+    {
+      "src": "h4",
+      "dst": "h12",
+      "protocol": "tcp",
+      "throughput": 7.9988720747749795,
+      "jitter": 0,
+      "packet_loss": 0,
+      "label": "1080p-Stream-2"
+    },
+    {
+      "src": "h5",
+      "dst": "h13",
+      "protocol": "tcp",
+      "throughput": 7.997952381614568,
+      "jitter": 0,
+      "packet_loss": 0,
+      "label": "1080p-Stream-3"
+    },
+    {
+      "src": "h6",
+      "dst": "h14",
+      "protocol": "tcp",
+      "throughput": 5.012329270256408,
+      "jitter": 0,
+      "packet_loss": 0,
+      "label": "720p-Stream-1"
+    },
+    {
+      "src": "h7",
+      "dst": "h15",
+      "protocol": "tcp",
+      "throughput": 5.012125663805217,
+      "jitter": 0,
+      "packet_loss": 0,
+      "label": "720p-Stream-2"
+    },
+    {
+      "src": "h8",
+      "dst": "h16",
+      "protocol": "tcp",
+      "throughput": 5.011945445409853,
+      "jitter": 0,
+      "packet_loss": 0,
+      "label": "720p-Stream-3"
+    },
+    {
+      "src": "h1",
+      "dst": "h13",
+      "protocol": "tcp",
+      "throughput": 2.5156972938354523,
+      "jitter": 0,
+      "packet_loss": 0,
+      "label": "480p-Stream-1"
+    },
+    {
+      "src": "h2",
+      "dst": "h14",
+      "protocol": "tcp",
+      "throughput": 2.5117076686770523,
+      "jitter": 0,
+      "packet_loss": 0,
+      "label": "480p-Stream-2"
+    },
+    {
+      "src": "h3",
+      "dst": "h15",
+      "protocol": "udp",
+      "throughput": 10.000024899860145,
+      "jitter": 0.10238501354593575,
+      "packet_loss": 0,
+      "label": "LiveSports-UDP-1"
+    },
+    {
+      "src": "h4",
+      "dst": "h16",
+      "protocol": "udp",
+      "throughput": 9.999733337457714,
+      "jitter": 0.06863751507709337,
+      "packet_loss": 0,
+      "label": "LiveSports-UDP-2"
+    }
+  ],
+  "throughput": {
+    "tcp": [
+      24.987747377719284,
+      24.99176729108877,
+      7.998366776846164,
+      7.9988720747749795,
+      7.997952381614568,
+      5.012329270256408,
+      5.012125663805217,
+      5.011945445409853,
+      2.5156972938354523,
+      2.5117076686770523
+    ],
+    "udp": [
+      10.000024899860145,
+      9.999733337457714
+    ]
+  },
+  "delay": [
+    {
+      "min": 0.024,
+      "avg": 0.0478,
+      "max": 0.187,
+      "count": 30
+    },
+    {
+      "min": 0.022,
+      "avg": 0.07556666666666664,
+      "max": 0.569,
+      "count": 30
+    },
+    {
+      "min": 0.023,
+      "avg": 0.06116666666666667,
+      "max": 0.171,
+      "count": 30
+    },
+    {
+      "min": 0.024,
+      "avg": 0.06056666666666665,
+      "max": 0.315,
+      "count": 30
+    },
+    {
+      "min": 0.027,
+      "avg": 0.060999999999999985,
+      "max": 0.29,
+      "count": 30
+    },
+    {
+      "min": 0.025,
+      "avg": 0.0625,
+      "max": 0.214,
+      "count": 30
+    },
+    {
+      "min": 0.025,
+      "avg": 0.05383333333333334,
+      "max": 0.254,
+      "count": 30
+    },
+    {
+      "min": 0.041,
+      "avg": 0.0824,
+      "max": 0.215,
+      "count": 30
+    }
+  ],
+  "jitter": [
+    0.10238501354593575,
+    0.06863751507709337
+  ],
+  "packet_loss": [
+    0,
+    0
+  ],
+  "cpu_utilization": {
+    "samples": [
+      0.2,
+      2.0,
+      11.3,
+      2.9,
+      3.8,
+      17.4,
+      1.9,
+      0.9,
+      0.9,
+      2.9,
+      3.7,
+      5.8,
+      24.4,
+      2.0,
+      2.9,
+      6.7,
+      4.6,
+      4.9,
+      1.0,
+      7.8,
+      8.8,
+      6.9,
+      4.9,
+      7.8,
+      3.9,
+      8.5,
+      3.9
+    ],
+    "avg": 5.655555555555556,
+    "max": 24.4,
+    "min": 0.2
+  },
+  "fairness_index": 0.27600407208638256,
+  "response_time": [
+    6.920099258422852,
+    4.0740966796875,
+    19.562482833862305,
+    19.693851470947266,
+    6.598711013793945
+  ]
+}

@@ -1,0 +1,254 @@
+{
+  "scenario": "voip_video_data_mix",
+  "algorithm": "wlc",
+  "start_time": "2025-10-29T10:47:38.816354",
+  "end_time": "2025-10-29T10:49:16.565870",
+  "flows": [
+    {
+      "src": "h1",
+      "dst": "h9",
+      "protocol": "tcp",
+      "throughput": 3.998548856907778,
+      "jitter": 0,
+      "packet_loss": 0,
+      "label": "VideoConf-1-Out"
+    },
+    {
+      "src": "h9",
+      "dst": "h1",
+      "protocol": "tcp",
+      "throughput": 4.006054336139777,
+      "jitter": 0,
+      "packet_loss": 0,
+      "label": "VideoConf-1-Return"
+    },
+    {
+      "src": "h2",
+      "dst": "h10",
+      "protocol": "tcp",
+      "throughput": 5.007612133816825,
+      "jitter": 0,
+      "packet_loss": 0,
+      "label": "VideoConf-2-Out"
+    },
+    {
+      "src": "h10",
+      "dst": "h2",
+      "protocol": "tcp",
+      "throughput": 5.00766947367778,
+      "jitter": 0,
+      "packet_loss": 0,
+      "label": "VideoConf-2-Return"
+    },
+    {
+      "src": "h5",
+      "dst": "h13",
+      "protocol": "udp",
+      "throughput": 0.08005823639009048,
+      "jitter": 1.4860729287229937,
+      "packet_loss": 0,
+      "label": "VoIP-1-Out"
+    },
+    {
+      "src": "h13",
+      "dst": "h5",
+      "protocol": "udp",
+      "throughput": 0.0800582141517184,
+      "jitter": 1.652911668663777,
+      "packet_loss": 0,
+      "label": "VoIP-1-Return"
+    },
+    {
+      "src": "h6",
+      "dst": "h14",
+      "protocol": "udp",
+      "throughput": 0.10000804884989668,
+      "jitter": 1.3767120701265845,
+      "packet_loss": 0,
+      "label": "VoIP-2-Out"
+    },
+    {
+      "src": "h14",
+      "dst": "h6",
+      "protocol": "udp",
+      "throughput": 0.10000742547329781,
+      "jitter": 1.1726600599315826,
+      "packet_loss": 0,
+      "label": "VoIP-2-Return"
+    },
+    {
+      "src": "h3",
+      "dst": "h11",
+      "protocol": "tcp",
+      "throughput": 79.95798044078734,
+      "jitter": 0,
+      "packet_loss": 0,
+      "label": "FileTransfer-1"
+    },
+    {
+      "src": "h4",
+      "dst": "h12",
+      "protocol": "tcp",
+      "throughput": 99.9648813253248,
+      "jitter": 0,
+      "packet_loss": 0,
+      "label": "FileTransfer-2"
+    },
+    {
+      "src": "h7",
+      "dst": "h15",
+      "protocol": "tcp",
+      "throughput": 10.004179750183058,
+      "jitter": 0,
+      "packet_loss": 0,
+      "label": "Web-1"
+    },
+    {
+      "src": "h8",
+      "dst": "h16",
+      "protocol": "tcp",
+      "throughput": 8.00056054990132,
+      "jitter": 0,
+      "packet_loss": 0,
+      "label": "Web-2"
+    }
+  ],
+  "throughput": {
+    "tcp": [
+      3.998548856907778,
+      4.006054336139777,
+      5.007612133816825,
+      5.00766947367778,
+      79.95798044078734,
+      99.9648813253248,
+      10.004179750183058,
+      8.00056054990132
+    ],
+    "udp": [
+      0.08005823639009048,
+      0.0800582141517184,
+      0.10000804884989668,
+      0.10000742547329781
+    ]
+  },
+  "delay": [
+    {
+      "min": 0.039,
+      "avg": 0.06676666666666667,
+      "max": 0.123,
+      "count": 30
+    },
+    {
+      "min": 0.049,
+      "avg": 0.09886666666666667,
+      "max": 0.316,
+      "count": 30
+    },
+    {
+      "min": 0.038,
+      "avg": 0.07916666666666665,
+      "max": 0.345,
+      "count": 30
+    },
+    {
+      "min": 0.04,
+      "avg": 0.09543333333333336,
+      "max": 0.445,
+      "count": 30
+    },
+    {
+      "min": 0.043,
+      "avg": 0.3087,
+      "max": 5.95,
+      "count": 30
+    },
+    {
+      "min": 0.04,
+      "avg": 0.11493333333333336,
+      "max": 0.675,
+      "count": 30
+    },
+    {
+      "min": 0.051,
+      "avg": 0.09989999999999997,
+      "max": 0.391,
+      "count": 30
+    },
+    {
+      "min": 0.032,
+      "avg": 0.06539999999999999,
+      "max": 0.175,
+      "count": 30
+    }
+  ],
+  "jitter": [
+    1.4860729287229937,
+    1.652911668663777,
+    1.3767120701265845,
+    1.1726600599315826
+  ],
+  "packet_loss": [
+    0,
+    0,
+    0,
+    0
+  ],
+  "cpu_utilization": {
+    "samples": [
+      23.5,
+      17.7,
+      28.4,
+      1.0,
+      2.0,
+      1.0,
+      3.9,
+      2.9,
+      3.9,
+      1.0,
+      6.8,
+      8.6,
+      3.9,
+      3.9,
+      3.9,
+      3.9,
+      2.0,
+      2.0,
+      3.9,
+      2.9,
+      2.9,
+      4.8,
+      5.7,
+      6.6,
+      4.9,
+      10.8,
+      0.9,
+      1.9,
+      1.0,
+      10.3,
+      3.9,
+      2.9,
+      3.9,
+      1.9,
+      2.9,
+      2.0,
+      5.8,
+      3.9,
+      1.0,
+      2.0,
+      4.9,
+      5.7,
+      2.0
+    ],
+    "avg": 5.109302325581398,
+    "max": 28.4,
+    "min": 0.9
+  },
+  "fairness_index": 0.4491000056553615,
+  "response_time": [
+    3.7560462951660156,
+    3.4766197204589844,
+    4.246711730957031,
+    6.251811981201172,
+    7.504940032958984
+  ]
+}

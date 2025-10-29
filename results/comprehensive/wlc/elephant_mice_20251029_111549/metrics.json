@@ -1,0 +1,261 @@
+{
+  "scenario": "elephant_mice",
+  "algorithm": "wlc",
+  "start_time": "2025-10-29T11:15:49.916495",
+  "end_time": "2025-10-29T11:17:52.110992",
+  "flows": [
+    {
+      "src": "h4",
+      "dst": "h12",
+      "protocol": "tcp",
+      "throughput": 4.95817341867719,
+      "jitter": 0,
+      "packet_loss": 0,
+      "label": "Mouse-TCP-R1",
+      "bandwidth_requested": "5M"
+    },
+    {
+      "src": "h5",
+      "dst": "h13",
+      "protocol": "udp",
+      "throughput": 3.0001923959212067,
+      "jitter": 0.13772991535559354,
+      "packet_loss": 0,
+      "label": "Mouse-UDP-R1",
+      "bandwidth_requested": "3M"
+    },
+    {
+      "src": "h5",
+      "dst": "h13",
+      "protocol": "tcp",
+      "throughput": 4.990709829621378,
+      "jitter": 0,
+      "packet_loss": 0,
+      "label": "Mouse-TCP-R2",
+      "bandwidth_requested": "5M"
+    },
+    {
+      "src": "h6",
+      "dst": "h14",
+      "protocol": "udp",
+      "throughput": 2.999813827441835,
+      "jitter": 0.20357275229592153,
+      "packet_loss": 0,
+      "label": "Mouse-UDP-R2",
+      "bandwidth_requested": "3M"
+    },
+    {
+      "src": "h7",
+      "dst": "h15",
+      "protocol": "udp",
+      "throughput": 2.9999212087930984,
+      "jitter": 0.2625167117161349,
+      "packet_loss": 0,
+      "label": "Mouse-UDP-R3",
+      "bandwidth_requested": "3M"
+    },
+    {
+      "src": "h6",
+      "dst": "h14",
+      "protocol": "tcp",
+      "throughput": 4.992894113240251,
+      "jitter": 0,
+      "packet_loss": 0,
+      "label": "Mouse-TCP-R3",
+      "bandwidth_requested": "5M"
+    },
+    {
+      "src": "h7",
+      "dst": "h15",
+      "protocol": "tcp",
+      "throughput": 4.992058195990932,
+      "jitter": 0,
+      "packet_loss": 0,
+      "label": "Mouse-TCP-R4",
+      "bandwidth_requested": "5M"
+    },
+    {
+      "src": "h8",
+      "dst": "h16",
+      "protocol": "udp",
+      "throughput": 2.999472537773134,
+      "jitter": 0.14232159313931236,
+      "packet_loss": 0,
+      "label": "Mouse-UDP-R4",
+      "bandwidth_requested": "3M"
+    },
+    {
+      "src": "h4",
+      "dst": "h12",
+      "protocol": "tcp",
+      "throughput": 4.993479620067476,
+      "jitter": 0,
+      "packet_loss": 0,
+      "label": "Mouse-TCP-R5",
+      "bandwidth_requested": "5M"
+    },
+    {
+      "src": "h5",
+      "dst": "h13",
+      "protocol": "udp",
+      "throughput": 2.999486331807258,
+      "jitter": 0.19448115129491822,
+      "packet_loss": 0,
+      "label": "Mouse-UDP-R5",
+      "bandwidth_requested": "3M"
+    },
+    {
+      "src": "h5",
+      "dst": "h13",
+      "protocol": "tcp",
+      "throughput": 4.99139778164277,
+      "jitter": 0,
+      "packet_loss": 0,
+      "label": "Mouse-TCP-R6",
+      "bandwidth_requested": "5M"
+    },
+    {
+      "src": "h6",
+      "dst": "h14",
+      "protocol": "udp",
+      "throughput": 2.99936219006736,
+      "jitter": 0.24554865934565528,
+      "packet_loss": 0,
+      "label": "Mouse-UDP-R6",
+      "bandwidth_requested": "3M"
+    },
+    {
+      "src": "h2",
+      "dst": "h10",
+      "protocol": "tcp",
+      "throughput": 79.9801185078751,
+      "jitter": 0,
+      "packet_loss": 0,
+      "label": "Elephant-TCP-2",
+      "bandwidth_requested": "80M"
+    },
+    {
+      "src": "h1",
+      "dst": "h9",
+      "protocol": "tcp",
+      "throughput": 79.97876345799364,
+      "jitter": 0,
+      "packet_loss": 0,
+      "label": "Elephant-TCP-1",
+      "bandwidth_requested": "80M"
+    },
+    {
+      "src": "h3",
+      "dst": "h11",
+      "protocol": "udp",
+      "throughput": 49.9990214119714,
+      "jitter": 0.029139549197496353,
+      "packet_loss": 0.013514765847028296,
+      "label": "Elephant-UDP-1",
+      "bandwidth_requested": "50M"
+    }
+  ],
+  "throughput": {
+    "tcp": [
+      4.95817341867719,
+      4.990709829621378,
+      4.992894113240251,
+      4.992058195990932,
+      4.993479620067476,
+      4.99139778164277,
+      79.9801185078751,
+      79.97876345799364
+    ],
+    "udp": [
+      3.0001923959212067,
+      2.999813827441835,
+      2.9999212087930984,
+      2.999472537773134,
+      2.999486331807258,
+      2.99936219006736,
+      49.9990214119714
+    ]
+  },
+  "delay": [
+    {
+      "min": 0.024,
+      "avg": 0.05139999999999999,
+      "max": 0.156,
+      "count": 30
+    },
+    {
+      "min": 0.026,
+      "avg": 0.054999999999999986,
+      "max": 0.097,
+      "count": 30
+    },
+    {
+      "min": 0.024,
+      "avg": 0.3976666666666666,
+      "max": 10.3,
+      "count": 30
+    }
+  ],
+  "jitter": [
+    0.13772991535559354,
+    0.20357275229592153,
+    0.2625167117161349,
+    0.14232159313931236,
+    0.19448115129491822,
+    0.24554865934565528,
+    0.029139549197496353
+  ],
+  "packet_loss": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0.013514765847028296
+  ],
+  "cpu_utilization": {
+    "samples": [
+      0.7,
+      1.0,
+      2.0,
+      2.0,
+      1.0,
+      3.9,
+      1.0,
+      2.9,
+      5.9,
+      2.0,
+      2.9,
+      1.0,
+      4.9,
+      1.0,
+      1.0,
+      1.0,
+      4.9,
+      2.0,
+      1.0,
+      2.0,
+      2.9,
+      1.0,
+      2.0,
+      1.0,
+      2.0,
+      2.0,
+      2.9,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      3.9,
+      3.0,
+      3.0
+    ],
+    "avg": 2.08,
+    "max": 5.9,
+    "min": 0.7
+  },
+  "fairness_index": 0.9999958168189281,
+  "response_time": []
+}

@@ -1,0 +1,231 @@
+{
+  "scenario": "mixed_load",
+  "algorithm": "wlc",
+  "start_time": "2025-10-29T11:18:02.124723",
+  "end_time": "2025-10-29T11:19:09.912636",
+  "flows": [
+    {
+      "src": "h1",
+      "dst": "h9",
+      "protocol": "tcp",
+      "throughput": 99.9242496831918,
+      "jitter": 0,
+      "packet_loss": 0,
+      "label": "Heavy-TCP-1",
+      "bandwidth_requested": "100M"
+    },
+    {
+      "src": "h2",
+      "dst": "h10",
+      "protocol": "tcp",
+      "throughput": 99.930989969463,
+      "jitter": 0,
+      "packet_loss": 0,
+      "label": "Heavy-TCP-2",
+      "bandwidth_requested": "100M"
+    },
+    {
+      "src": "h3",
+      "dst": "h11",
+      "protocol": "tcp",
+      "throughput": 29.741105779638605,
+      "jitter": 0,
+      "packet_loss": 0,
+      "label": "Medium-TCP-1",
+      "bandwidth_requested": "30M"
+    },
+    {
+      "src": "h4",
+      "dst": "h12",
+      "protocol": "tcp",
+      "throughput": 29.99401640690139,
+      "jitter": 0,
+      "packet_loss": 0,
+      "label": "Medium-TCP-2",
+      "bandwidth_requested": "30M"
+    },
+    {
+      "src": "h5",
+      "dst": "h13",
+      "protocol": "tcp",
+      "throughput": 29.984738070449147,
+      "jitter": 0,
+      "packet_loss": 0,
+      "label": "Medium-TCP-3",
+      "bandwidth_requested": "30M"
+    },
+    {
+      "src": "h6",
+      "dst": "h14",
+      "protocol": "tcp",
+      "throughput": 5.012115730170344,
+      "jitter": 0,
+      "packet_loss": 0,
+      "label": "Light-TCP-1",
+      "bandwidth_requested": "5M"
+    },
+    {
+      "src": "h7",
+      "dst": "h15",
+      "protocol": "tcp",
+      "throughput": 5.015206321245546,
+      "jitter": 0,
+      "packet_loss": 0,
+      "label": "Light-TCP-2",
+      "bandwidth_requested": "5M"
+    },
+    {
+      "src": "h8",
+      "dst": "h16",
+      "protocol": "udp",
+      "throughput": 0.5000387330286336,
+      "jitter": 0.2021859254621343,
+      "packet_loss": 0,
+      "label": "VeryLight-UDP-1",
+      "bandwidth_requested": "500K"
+    },
+    {
+      "src": "h1",
+      "dst": "h13",
+      "protocol": "udp",
+      "throughput": 0.5000409748613684,
+      "jitter": 0.146917607865146,
+      "packet_loss": 0,
+      "label": "VeryLight-UDP-2",
+      "bandwidth_requested": "500K"
+    },
+    {
+      "src": "h2",
+      "dst": "h14",
+      "protocol": "udp",
+      "throughput": 1.0000817830430035,
+      "jitter": 0.3253570390787401,
+      "packet_loss": 0,
+      "label": "VeryLight-UDP-3",
+      "bandwidth_requested": "1M"
+    }
+  ],
+  "throughput": {
+    "tcp": [
+      99.9242496831918,
+      99.930989969463,
+      29.741105779638605,
+      29.99401640690139,
+      29.984738070449147,
+      5.012115730170344,
+      5.015206321245546
+    ],
+    "udp": [
+      0.5000387330286336,
+      0.5000409748613684,
+      1.0000817830430035
+    ]
+  },
+  "delay": [
+    {
+      "min": 0.023,
+      "avg": 0.05866666666666668,
+      "max": 0.297,
+      "count": 30
+    },
+    {
+      "min": 0.027,
+      "avg": 0.08726666666666666,
+      "max": 0.373,
+      "count": 30
+    },
+    {
+      "min": 0.024,
+      "avg": 0.04666666666666667,
+      "max": 0.147,
+      "count": 30
+    },
+    {
+      "min": 0.022,
+      "avg": 0.03596666666666668,
+      "max": 0.062,
+      "count": 30
+    },
+    {
+      "min": 0.025,
+      "avg": 0.05393333333333335,
+      "max": 0.165,
+      "count": 30
+    },
+    {
+      "min": 0.023,
+      "avg": 0.04130000000000001,
+      "max": 0.165,
+      "count": 30
+    },
+    {
+      "min": 0.032,
+      "avg": 0.06609999999999999,
+      "max": 0.203,
+      "count": 30
+    },
+    {
+      "min": 0.026,
+      "avg": 0.06143333333333332,
+      "max": 0.267,
+      "count": 30
+    }
+  ],
+  "jitter": [
+    0.2021859254621343,
+    0.146917607865146,
+    0.3253570390787401
+  ],
+  "packet_loss": [
+    0,
+    0,
+    0
+  ],
+  "cpu_utilization": {
+    "samples": [
+      0.5,
+      8.8,
+      1.0,
+      5.9,
+      1.9,
+      2.9,
+      25.5,
+      1.0,
+      2.0,
+      1.9,
+      1.0,
+      3.9,
+      5.9,
+      5.6,
+      7.8,
+      9.8,
+      1.0,
+      1.0,
+      2.9,
+      4.7,
+      2.9,
+      7.7,
+      4.8,
+      3.9,
+      1.0,
+      1.0,
+      2.0,
+      1.0,
+      3.8,
+      2.0,
+      4.9,
+      1.9
+    ],
+    "avg": 4.121875,
+    "max": 25.5,
+    "min": 0.5
+  },
+  "fairness_index": 0.9999935672418193,
+  "response_time": [
+    15.146493911743164,
+    4.125356674194336,
+    2.8586387634277344,
+    3.6547183990478516,
+    3.8509368896484375
+  ]
+}

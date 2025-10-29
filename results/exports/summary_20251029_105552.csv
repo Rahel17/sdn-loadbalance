@@ -1,0 +1,5 @@
+Scenario,Algorithm,TCP Throughput Avg (Mbps),TCP Throughput Min (Mbps),TCP Throughput Max (Mbps),UDP Throughput Avg (Mbps),UDP Throughput Min (Mbps),UDP Throughput Max (Mbps),Delay Avg (ms),Delay Min (ms),Delay Max (ms),Jitter Avg (ms),Jitter Min (ms),Jitter Max (ms),Packet Loss Avg (%),Packet Loss Max (%),CPU Avg (%),CPU Max (%),CPU Min (%),Fairness Index,Response Time Avg (ms),Total Flows,TCP Flows,UDP Flows,Test Date
+live_streaming,wlc,9.40,2.51,24.99,9.9999,9.9997,10.0000,0.06,0.02,0.57,0.0855,0.0686,0.1024,0.0000,0.0000,5.66,24.40,0.20,0.2760,11.37,12,10,2,2025-10-29T10:49:26.576746
+voip_video_data_mix,wlc,26.99,4.00,99.96,0.0900,0.0801,0.1000,0.12,0.03,5.95,1.4221,1.1727,1.6529,0.0000,0.0000,5.11,28.40,0.90,0.4491,5.05,12,8,4,2025-10-29T10:47:38.816354
+mixed_load,wlc,42.83,5.01,99.93,0.6667,0.5000,1.0001,0.07,0.02,1.64,0.1024,0.0379,0.2018,0.0000,0.0000,5.07,16.40,0.50,0.1501,6.77,10,7,3,2025-10-29T10:52:56.838777
+elephant_mice,wlc,23.57,4.81,79.40,9.7140,2.9986,49.9997,0.13,0.02,5.83,0.2190,0.0262,0.6128,0.0041,0.0284,1.84,5.90,0.70,0.1270,0.00,15,8,7,2025-10-29T10:50:43.939457

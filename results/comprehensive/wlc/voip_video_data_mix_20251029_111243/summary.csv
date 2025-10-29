@@ -1,0 +1,2 @@
+Scenario,Algorithm,TCP Throughput Avg (Mbps),TCP Throughput Min (Mbps),TCP Throughput Max (Mbps),UDP Throughput Avg (Mbps),Delay Avg (ms),Delay Min (ms),Delay Max (ms),Jitter Avg (ms),Jitter Min (ms),Jitter Max (ms),Packet Loss Avg (%),Packet Loss Max (%),CPU Avg (%),CPU Max (%),CPU Min (%),Fairness Index,Response Time Avg (ms),Total Flows,TCP Flows,UDP Flows,Test Date
+voip_video_data_mix,wlc,26.9951,4.0060,99.9543,0.0900,0.0898,0.0240,2.2700,1.2620,1.1914,1.3523,0.0000,0,5.4952,27.4000,1.0000,1.0000,7.4980,12,8,4,2025-10-29T11:12:43.578896

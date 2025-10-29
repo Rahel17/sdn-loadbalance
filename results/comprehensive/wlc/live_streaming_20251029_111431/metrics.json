@@ -1,0 +1,257 @@
+{
+  "scenario": "live_streaming",
+  "algorithm": "wlc",
+  "start_time": "2025-10-29T11:14:31.541617",
+  "end_time": "2025-10-29T11:15:39.908490",
+  "flows": [
+    {
+      "src": "h1",
+      "dst": "h9",
+      "protocol": "tcp",
+      "throughput": 24.71638091491273,
+      "jitter": 0,
+      "packet_loss": 0,
+      "label": "4K-Stream-1",
+      "bandwidth_requested": "25M"
+    },
+    {
+      "src": "h2",
+      "dst": "h10",
+      "protocol": "tcp",
+      "throughput": 24.990859066296498,
+      "jitter": 0,
+      "packet_loss": 0,
+      "label": "4K-Stream-2",
+      "bandwidth_requested": "25M"
+    },
+    {
+      "src": "h3",
+      "dst": "h11",
+      "protocol": "tcp",
+      "throughput": 7.99820239892874,
+      "jitter": 0,
+      "packet_loss": 0,
+      "label": "1080p-Stream-1",
+      "bandwidth_requested": "8M"
+    },
+    {
+      "src": "h4",
+      "dst": "h12",
+      "protocol": "tcp",
+      "throughput": 7.998705944209034,
+      "jitter": 0,
+      "packet_loss": 0,
+      "label": "1080p-Stream-2",
+      "bandwidth_requested": "8M"
+    },
+    {
+      "src": "h5",
+      "dst": "h13",
+      "protocol": "tcp",
+      "throughput": 7.9988165195194165,
+      "jitter": 0,
+      "packet_loss": 0,
+      "label": "1080p-Stream-3",
+      "bandwidth_requested": "8M"
+    },
+    {
+      "src": "h6",
+      "dst": "h14",
+      "protocol": "tcp",
+      "throughput": 5.012242700014451,
+      "jitter": 0,
+      "packet_loss": 0,
+      "label": "720p-Stream-1",
+      "bandwidth_requested": "5M"
+    },
+    {
+      "src": "h7",
+      "dst": "h15",
+      "protocol": "tcp",
+      "throughput": 5.01235656930389,
+      "jitter": 0,
+      "packet_loss": 0,
+      "label": "720p-Stream-2",
+      "bandwidth_requested": "5M"
+    },
+    {
+      "src": "h8",
+      "dst": "h16",
+      "protocol": "tcp",
+      "throughput": 5.01236166181966,
+      "jitter": 0,
+      "packet_loss": 0,
+      "label": "720p-Stream-3",
+      "bandwidth_requested": "5M"
+    },
+    {
+      "src": "h1",
+      "dst": "h13",
+      "protocol": "tcp",
+      "throughput": 2.5122862916151156,
+      "jitter": 0,
+      "packet_loss": 0,
+      "label": "480p-Stream-1",
+      "bandwidth_requested": "2500K"
+    },
+    {
+      "src": "h2",
+      "dst": "h14",
+      "protocol": "tcp",
+      "throughput": 2.512020074342269,
+      "jitter": 0,
+      "packet_loss": 0,
+      "label": "480p-Stream-2",
+      "bandwidth_requested": "2500K"
+    },
+    {
+      "src": "h3",
+      "dst": "h15",
+      "protocol": "udp",
+      "throughput": 10.000071566598677,
+      "jitter": 0.11790107612179035,
+      "packet_loss": 0,
+      "label": "LiveSports-UDP-1",
+      "bandwidth_requested": "10M"
+    },
+    {
+      "src": "h4",
+      "dst": "h16",
+      "protocol": "udp",
+      "throughput": 9.999876666806445,
+      "jitter": 0.0712606347587272,
+      "packet_loss": 0,
+      "label": "LiveSports-UDP-2",
+      "bandwidth_requested": "10M"
+    }
+  ],
+  "throughput": {
+    "tcp": [
+      24.71638091491273,
+      24.990859066296498,
+      7.99820239892874,
+      7.998705944209034,
+      7.9988165195194165,
+      5.012242700014451,
+      5.01235656930389,
+      5.01236166181966,
+      2.5122862916151156,
+      2.512020074342269
+    ],
+    "udp": [
+      10.000071566598677,
+      9.999876666806445
+    ]
+  },
+  "delay": [
+    {
+      "min": 0.033,
+      "avg": 0.07423333333333333,
+      "max": 0.254,
+      "count": 30
+    },
+    {
+      "min": 0.027,
+      "avg": 0.07176666666666669,
+      "max": 0.301,
+      "count": 30
+    },
+    {
+      "min": 0.022,
+      "avg": 0.07206666666666668,
+      "max": 0.38,
+      "count": 30
+    },
+    {
+      "min": 0.025,
+      "avg": 0.05686666666666668,
+      "max": 0.202,
+      "count": 30
+    },
+    {
+      "min": 0.034,
+      "avg": 0.08003333333333333,
+      "max": 0.329,
+      "count": 30
+    },
+    {
+      "min": 0.027,
+      "avg": 0.07753333333333336,
+      "max": 0.323,
+      "count": 30
+    },
+    {
+      "min": 0.023,
+      "avg": 0.05949999999999998,
+      "max": 0.196,
+      "count": 30
+    },
+    {
+      "min": 0.023,
+      "avg": 0.05223333333333331,
+      "max": 0.219,
+      "count": 30
+    }
+  ],
+  "jitter": [
+    0.11790107612179035,
+    0.0712606347587272
+  ],
+  "packet_loss": [
+    0,
+    0
+  ],
+  "cpu_utilization": {
+    "samples": [
+      0.2,
+      1.0,
+      7.5,
+      1.9,
+      5.9,
+      13.2,
+      21.7,
+      2.8,
+      2.7,
+      1.0,
+      3.9,
+      1.9,
+      7.8,
+      3.9,
+      3.9,
+      1.0,
+      2.9,
+      5.9,
+      3.9,
+      1.0,
+      5.6,
+      6.8,
+      2.0,
+      8.5,
+      5.8,
+      1.9,
+      9.4,
+      12.4,
+      8.7,
+      7.7,
+      4.9,
+      2.9,
+      2.9,
+      1.0,
+      5.8,
+      7.6,
+      2.9,
+      1.0
+    ],
+    "avg": 5.047368421052632,
+    "max": 21.7,
+    "min": 0.2
+  },
+  "fairness_index": 0.9999902788891577,
+  "response_time": [
+    3.9298534393310547,
+    3.9665699005126953,
+    6.7462921142578125,
+    6.599187850952148,
+    4.511594772338867
+  ]
+}

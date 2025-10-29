@@ -1,0 +1,2 @@
+Scenario,Algorithm,TCP Throughput Avg (Mbps),TCP Throughput Min (Mbps),TCP Throughput Max (Mbps),UDP Throughput Avg (Mbps),Delay Avg (ms),Delay Min (ms),Delay Max (ms),Jitter Avg (ms),Jitter Min (ms),Jitter Max (ms),Packet Loss Avg (%),Packet Loss Max (%),CPU Avg (%),CPU Max (%),CPU Min (%),Fairness Index,Response Time Avg (ms),Total Flows,TCP Flows,UDP Flows,Test Date
+live_streaming,wlc,9.3764,2.5120,24.9909,10.0000,0.0680,0.0220,0.3800,0.0946,0.0713,0.1179,0.0000,0,5.0474,21.7000,0.2000,1.0000,5.1507,12,10,2,2025-10-29T11:14:31.541617

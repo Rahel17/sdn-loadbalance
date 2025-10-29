@@ -1,0 +1,210 @@
+{
+  "scenario": "mixed_load",
+  "algorithm": "wlc",
+  "start_time": "2025-10-29T10:52:56.838777",
+  "end_time": "2025-10-29T10:54:04.371391",
+  "flows": [
+    {
+      "src": "h1",
+      "dst": "h9",
+      "protocol": "tcp",
+      "throughput": 99.9281855670632,
+      "jitter": 0,
+      "packet_loss": 0,
+      "label": "Heavy-TCP-1"
+    },
+    {
+      "src": "h2",
+      "dst": "h10",
+      "protocol": "tcp",
+      "throughput": 99.93095335310593,
+      "jitter": 0,
+      "packet_loss": 0,
+      "label": "Heavy-TCP-2"
+    },
+    {
+      "src": "h3",
+      "dst": "h11",
+      "protocol": "tcp",
+      "throughput": 29.985479167261385,
+      "jitter": 0,
+      "packet_loss": 0,
+      "label": "Medium-TCP-1"
+    },
+    {
+      "src": "h4",
+      "dst": "h12",
+      "protocol": "tcp",
+      "throughput": 29.987406681132715,
+      "jitter": 0,
+      "packet_loss": 0,
+      "label": "Medium-TCP-2"
+    },
+    {
+      "src": "h5",
+      "dst": "h13",
+      "protocol": "tcp",
+      "throughput": 29.986137582586633,
+      "jitter": 0,
+      "packet_loss": 0,
+      "label": "Medium-TCP-3"
+    },
+    {
+      "src": "h6",
+      "dst": "h14",
+      "protocol": "tcp",
+      "throughput": 5.012309067483067,
+      "jitter": 0,
+      "packet_loss": 0,
+      "label": "Light-TCP-1"
+    },
+    {
+      "src": "h7",
+      "dst": "h15",
+      "protocol": "tcp",
+      "throughput": 5.00976335658572,
+      "jitter": 0,
+      "packet_loss": 0,
+      "label": "Light-TCP-2"
+    },
+    {
+      "src": "h8",
+      "dst": "h16",
+      "protocol": "udp",
+      "throughput": 0.500030982609373,
+      "jitter": 0.20179002569502985,
+      "packet_loss": 0,
+      "label": "VeryLight-UDP-1"
+    },
+    {
+      "src": "h1",
+      "dst": "h13",
+      "protocol": "udp",
+      "throughput": 0.5000414248971282,
+      "jitter": 0.0676007376049718,
+      "packet_loss": 0,
+      "label": "VeryLight-UDP-2"
+    },
+    {
+      "src": "h2",
+      "dst": "h14",
+      "protocol": "udp",
+      "throughput": 1.000067598801248,
+      "jitter": 0.037919748373815634,
+      "packet_loss": 0,
+      "label": "VeryLight-UDP-3"
+    }
+  ],
+  "throughput": {
+    "tcp": [
+      99.9281855670632,
+      99.93095335310593,
+      29.985479167261385,
+      29.987406681132715,
+      29.986137582586633,
+      5.012309067483067,
+      5.00976335658572
+    ],
+    "udp": [
+      0.500030982609373,
+      0.5000414248971282,
+      1.000067598801248
+    ]
+  },
+  "delay": [
+    {
+      "min": 0.03,
+      "avg": 0.07766666666666669,
+      "max": 0.385,
+      "count": 30
+    },
+    {
+      "min": 0.027,
+      "avg": 0.08169999999999997,
+      "max": 0.393,
+      "count": 30
+    },
+    {
+      "min": 0.022,
+      "avg": 0.09866666666666664,
+      "max": 1.64,
+      "count": 30
+    },
+    {
+      "min": 0.024,
+      "avg": 0.05476666666666667,
+      "max": 0.128,
+      "count": 30
+    },
+    {
+      "min": 0.026,
+      "avg": 0.07426666666666668,
+      "max": 0.451,
+      "count": 30
+    },
+    {
+      "min": 0.023,
+      "avg": 0.06129999999999999,
+      "max": 0.55,
+      "count": 30
+    },
+    {
+      "min": 0.024,
+      "avg": 0.05283333333333332,
+      "max": 0.303,
+      "count": 30
+    },
+    {
+      "min": 0.037,
+      "avg": 0.07696666666666664,
+      "max": 0.311,
+      "count": 30
+    }
+  ],
+  "jitter": [
+    0.20179002569502985,
+    0.0676007376049718,
+    0.037919748373815634
+  ],
+  "packet_loss": [
+    0,
+    0,
+    0
+  ],
+  "cpu_utilization": {
+    "samples": [
+      0.5,
+      3.9,
+      1.0,
+      2.0,
+      11.8,
+      4.9,
+      14.6,
+      2.9,
+      3.9,
+      2.0,
+      1.0,
+      5.8,
+      1.0,
+      2.9,
+      3.0,
+      4.9,
+      7.8,
+      1.0,
+      13.2,
+      16.4,
+      1.9
+    ],
+    "avg": 5.066666666666667,
+    "max": 16.4,
+    "min": 0.5
+  },
+  "fairness_index": 0.15009459112248436,
+  "response_time": [
+    7.185935974121094,
+    4.471540451049805,
+    7.463216781616211,
+    10.056734085083008,
+    4.654645919799805
+  ]
+}
