@@ -194,20 +194,19 @@ class WeightedLeastConnectionController(app_manager.RyuApp):
 
     @set_ev_cls(ofp_event.EventOFPFlowRemoved, MAIN_DISPATCHER)
     def flow_removed_handler(self, ev):
-        """Handle flow removal - decrement connection counter"""
         msg = ev.msg
-        dpid = msg.datapath.id
-        
-        # Extract output port from flow
-        for instruction in msg.instructions:
-            for action in instruction.actions:
-                if hasattr(action, 'port'):
-                    port = action.port
-                    if dpid in self.port_stats and port in self.port_stats[dpid]:
-                        self.port_stats[dpid][port]['connections'] = max(
-                            0, self.port_stats[dpid][port]['connections'] - 1
-                        )
-                        self.logger.debug(f"[WLC] Flow removed from switch {dpid} port {port}")
+        dp = msg.datapath
+        ofp = dp.ofproto
+        parser = dp.ofproto_parser
+
+        # Atribut "instructions" tidak tersedia di OFPFlowRemoved
+        # Jadi cukup ambil info dasar saja
+        match = msg.match
+        cookie = msg.cookie
+        reason = msg.reason
+
+        self.logger.info(f"Flow removed: cookie={cookie}, reason={reason}, match={match}")
+
 
     @set_ev_cls(ofp_event.EventOFPPacketIn, MAIN_DISPATCHER)
     def packet_in_handler(self, ev):

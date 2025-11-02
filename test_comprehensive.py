@@ -105,11 +105,11 @@ class MetricsCollector:
         
         info(f"*** CSV summary exported to {csv_file} ***\n")
         
-        # Also export detailed flows
+        # Also export detailed flows (NOW WITH BANDWIDTH_REQUESTED!)
         flows_csv = f"{self.results_dir}/flows.csv"
         with open(flows_csv, 'w', newline='') as f:
             if self.metrics['flows']:
-                fieldnames = ['label', 'src', 'dst', 'protocol', 'throughput', 'jitter', 'packet_loss']
+                fieldnames = ['label', 'src', 'dst', 'protocol', 'bandwidth_requested', 'throughput', 'jitter', 'packet_loss']
                 writer = csv.DictWriter(f, fieldnames=fieldnames)
                 writer.writeheader()
                 for flow in self.metrics['flows']:
@@ -118,6 +118,7 @@ class MetricsCollector:
                         'src': flow.get('src', ''),
                         'dst': flow.get('dst', ''),
                         'protocol': flow.get('protocol', ''),
+                        'bandwidth_requested': flow.get('bandwidth_requested', 'N/A'),
                         'throughput': f"{flow.get('throughput', 0):.2f}",
                         'jitter': f"{flow.get('jitter', 0):.4f}",
                         'packet_loss': f"{flow.get('packet_loss', 0):.4f}"
@@ -162,6 +163,7 @@ class MetricsCollector:
             bandwidth_requested = flow.get('bandwidth_requested', None)
             
             if not bandwidth_requested:
+                # Fallback: skip this flow for fairness calculation
                 continue
             
             # Parse bandwidth string (e.g., "100M" -> 100, "500K" -> 0.5)
@@ -179,12 +181,18 @@ class MetricsCollector:
                 requested = float(bandwidth_requested)
             
             if requested > 0 and throughput_achieved > 0:
-                # Calculate achievement ratio
-                ratio = min(throughput_achieved / requested, 1.0)
+                # Calculate achievement ratio (remove capping to see true variance)
+                ratio = throughput_achieved / requested
                 flow_ratios.append(ratio)
         
-        if not flow_ratios:
+        if not flow_ratios or len(flow_ratios) < 2:
+            # Cannot calculate fairness with 0 or 1 flow
+            info("   Warning: Not enough flows with bandwidth info for fairness calculation\n")
             return 0
+        
+        # Debug output
+        info(f"   DEBUG: {len(flow_ratios)} flows in fairness calculation\n")
+        info(f"   DEBUG: Ratios - Min: {min(flow_ratios):.4f}, Max: {max(flow_ratios):.4f}, Avg: {sum(flow_ratios)/len(flow_ratios):.4f}\n")
         
         # Calculate Jain's Fairness Index on ratios
         return self.calculate_fairness_index(flow_ratios)
@@ -198,16 +206,16 @@ class MetricsCollector:
         # Throughput
         if self.metrics['throughput']['tcp']:
             tcp_avg = sum(self.metrics['throughput']['tcp']) / len(self.metrics['throughput']['tcp'])
-            info(f"Throughput (TCP): {tcp_avg:.2f} Mbps (avg of {len(self.metrics['throughput']['tcp'])} flows)\n")
+            info(f"📊 Throughput (TCP): {tcp_avg:.2f} Mbps (avg of {len(self.metrics['throughput']['tcp'])} flows)\n")
         
         if self.metrics['throughput']['udp']:
             udp_avg = sum(self.metrics['throughput']['udp']) / len(self.metrics['throughput']['udp'])
-            info(f"Throughput (UDP): {udp_avg:.2f} Mbps (avg of {len(self.metrics['throughput']['udp'])} flows)\n")
+            info(f"📊 Throughput (UDP): {udp_avg:.2f} Mbps (avg of {len(self.metrics['throughput']['udp'])} flows)\n")
         
         # Delay
         if self.metrics['delay']:
             avg_delays = [d['avg'] for d in self.metrics['delay']]
-            info(f"Delay (RTT): {sum(avg_delays)/len(avg_delays):.2f} ms (avg)\n")
+            info(f"⏱️  Delay (RTT): {sum(avg_delays)/len(avg_delays):.2f} ms (avg)\n")
             info(f"    Min: {min([d['min'] for d in self.metrics['delay']]):.2f} ms, "
                  f"Max: {max([d['max'] for d in self.metrics['delay']]):.2f} ms\n")
         
@@ -215,24 +223,24 @@ class MetricsCollector:
         if self.metrics['jitter']:
             non_zero = [j for j in self.metrics['jitter'] if j > 0]
             if non_zero:
-                info(f"Jitter: {sum(non_zero)/len(non_zero):.4f} ms (avg of {len(non_zero)} UDP flows)\n")
+                info(f"📶 Jitter: {sum(non_zero)/len(non_zero):.4f} ms (avg of {len(non_zero)} UDP flows)\n")
             else:
-                info(f"Jitter: N/A (no UDP flows measured)\n")
+                info(f"📶 Jitter: N/A (no UDP flows measured)\n")
         else:
-            info(f"Jitter: N/A (no data)\n")
+            info(f"📶 Jitter: N/A (no data)\n")
         
         # Packet Loss
         if self.metrics['packet_loss']:
             non_zero = [p for p in self.metrics['packet_loss'] if p > 0]
             if non_zero:
-                info(f"Packet Loss: {sum(non_zero)/len(non_zero):.4f}% (avg)\n")
+                info(f"📉 Packet Loss: {sum(non_zero)/len(non_zero):.4f}% (avg)\n")
             else:
-                info(f"Packet Loss: 0.00% (no loss detected)\n")
+                info(f"📉 Packet Loss: 0.00% (no loss detected)\n")
         
         # CPU
         cpu = self.metrics['cpu_utilization']
         if cpu['avg'] > 0:
-            info(f"CPU Utilization: {cpu['avg']:.2f}% (avg), {cpu['max']:.2f}% (max), {cpu['min']:.2f}% (min)\n")
+            info(f"💻 CPU Utilization: {cpu['avg']:.2f}% (avg), {cpu['max']:.2f}% (max), {cpu['min']:.2f}% (min)\n")
         
         # Fairness
         info(f"⚖️  Fairness Index: {self.metrics['fairness_index']:.4f}\n")
@@ -793,12 +801,13 @@ def main():
         info("  4 or mixed       - Mixed Load (Heavy/Medium/Light)\n")
         info("  all              - Run all scenarios\n")
         info("\nFeatures:\n")
-        info("  ✓ Complete metrics: Throughput, Delay, Jitter, Packet Loss\n")
-        info("  ✓ CPU Utilization monitoring\n")
-        info("  ✓ Fairness Index calculation\n")
-        info("  ✓ Response Time measurement\n")
-        info("  ✓ TCP + UDP traffic mix\n")
-        info("  ✓ Real-world heterogeneous traffic patterns\n")
+        info("  - Complete metrics: Throughput, Delay, Jitter, Packet Loss\n")
+        info("  - CPU Utilization monitoring\n")
+        info("  - Normalized Fairness Index calculation\n")
+        info("  - Response Time measurement\n")
+        info("  - TCP + UDP traffic mix\n")
+        info("  - Real-world heterogeneous traffic patterns\n")
+        info("  - Auto-export to CSV\n")
         info("\nExample:\n")
         info("  sudo python3 test_comprehensive.py wrr office\n")
         info("  sudo python3 test_comprehensive.py wlc all\n")
@@ -818,7 +827,7 @@ def main():
     info(f"Scenario: {scenario}\n")
     info("="*70 + "\n")
     
-    info("\n IMPORTANT: Make sure Ryu controller is running!\n")
+    info("\nIMPORTANT: Make sure Ryu controller is running!\n")
     controller_file = "weighted_round_robin_controller.py" if algorithm == 'wrr' \
                      else "weighted_least_connection_controller.py"
     info(f"Command: ryu-manager --ofp-tcp-listen-port 6653 controllers/{controller_file} --verbose\n")
@@ -877,18 +886,18 @@ def main():
                 info(f"\n{name}:\n")
                 if result['throughput']['tcp']:
                     tcp_avg = sum(result['throughput']['tcp']) / len(result['throughput']['tcp'])
-                    info(f"  • TCP Throughput: {tcp_avg:.2f} Mbps\n")
+                    info(f"  - TCP Throughput: {tcp_avg:.2f} Mbps\n")
                 if result['throughput']['udp']:
                     udp_avg = sum(result['throughput']['udp']) / len(result['throughput']['udp'])
-                    info(f"  • UDP Throughput: {udp_avg:.2f} Mbps\n")
+                    info(f"  - UDP Throughput: {udp_avg:.2f} Mbps\n")
                 if result['jitter']:
                     jitter_avg = sum(result['jitter']) / len(result['jitter'])
-                    info(f"  • Jitter: {jitter_avg:.4f} ms\n")
+                    info(f"  - Jitter: {jitter_avg:.4f} ms\n")
                 if result['delay']:
                     delay_avg = sum(d['avg'] for d in result['delay']) / len(result['delay'])
-                    info(f"  • Delay: {delay_avg:.2f} ms\n")
-                info(f"  • CPU: {result['cpu_utilization']['avg']:.2f}%\n")
-                info(f"  • Fairness Index: {result['fairness_index']:.4f}\n")
+                    info(f"  - Delay: {delay_avg:.2f} ms\n")
+                info(f"  - CPU: {result['cpu_utilization']['avg']:.2f}%\n")
+                info(f"  - Fairness Index: {result['fairness_index']:.4f}\n")
             
             info("\n" + "="*70 + "\n")
             
@@ -900,9 +909,9 @@ def main():
         info(f"Results saved in: results/comprehensive/{algorithm}/\n\n")
         
     except KeyboardInterrupt:
-        info("\n\n Test interrupted by user\n")
+        info("\n\nTest interrupted by user\n")
     except Exception as e:
-        info(f"\n\n Error occurred: {e}\n")
+        info(f"\n\nError occurred: {e}\n")
         import traceback
         traceback.print_exc()
     finally:
